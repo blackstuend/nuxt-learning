@@ -50,5 +50,8 @@ export default {
   router: {              // customize nuxt.js router (vue-router).
     middleware: 'i18n'   // middleware all pages of the application
   },
-  
+  server: {
+    host: "0.0.0.0"
+  }
+
 }

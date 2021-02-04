@@ -1,0 +1,22 @@
+{
+    "links": {
+      "home": "Home"
+    },
+    "home": {
+      "title": "Welcome",
+      "introduction": "This is an introduction in English."
+    },
+    "about": {
+      "title": "About",
+      "introduction": "..."
+    },
+    "header":{
+      "get_api":"get_api",
+      "Base_64":"Base_64 change",
+      "image":"image",
+      "bluetooth":"bluetooth connect",
+      "language":"change language",
+      "english":"english",
+      "chinese":"chinese"
+    }
+  }

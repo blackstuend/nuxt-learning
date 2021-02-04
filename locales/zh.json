@@ -1,0 +1,22 @@
+{
+  "links": {
+    "home": "Accueil"
+  },
+  "home": {
+    "title": "Bienvenue",
+    "introduction": "Ceci est un texte d'introduction en Français."
+  },
+  "about": {
+    "title": "À propos",
+    "introduction": "..."
+  },
+  "header":{
+    "get_api":"獲取台中api",
+    "Base_64":"切換base64",
+    "image":"圖片",
+    "bluetooth":"藍芽連線",
+    "language":"切換語言",
+    "english":"英文",
+    "chinese":"中文"
+  }
+}

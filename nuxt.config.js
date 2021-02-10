@@ -1,3 +1,4 @@
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -26,7 +27,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~/plugins/i18n.js',
-    '~/plugins/loading-overlay.js'
+    '~/plugins/loading-overlay.js',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -52,7 +53,6 @@ export default {
   },
   router: {              // customize nuxt.js router (vue-router).
     middleware: 'i18n',
-    base: '/nuxt-learning/'
   },
   server: {
     host: "0.0.0.0"

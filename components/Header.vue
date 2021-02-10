@@ -61,7 +61,6 @@
   </div>
 </template>
 <script>
-import $ from 'jquery'
 export default {
   data(){
       return {
@@ -70,7 +69,6 @@ export default {
   },
   methods: {
     open_dropdown_menu() {
-      $('.dropdown-menu').toggle()
     },
     toEnglish(){
       this.$store.commit('SET_LANG', "en");
@@ -83,9 +81,6 @@ export default {
     }
   },
   mounted() {
-    $('.dropdown-item').click(() => {
-      $('.dropdown-menu').toggle()
-    })
     let route_path = this.$route.fullPath.split("/");
     console.log(route_path[route_path.length - 1 ])
     this.topcis  = route_path[route_path.length - 1 ] == "" ? "Get Api" : route_path[route_path.length - 1 ]

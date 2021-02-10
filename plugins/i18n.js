@@ -10,12 +10,7 @@ export default ({ app, store }) => {
     messages: {
       'en': require('~/locales/en.json'),
       'zh': require('~/locales/zh.json')
-    }
+    },
+    silentFallbackWarn:true
   });
-  app.i18n.path = (link) => {
-    if (app.i18n.locale === app.i18n.fallbackLocale) {
-      return `/${link}`;
-    }
-    return `/${app.i18n.locale}/${link}`;
-  }
 }

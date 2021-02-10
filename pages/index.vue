@@ -1,12 +1,3 @@
 <template>
-  <div>
-      
-  </div>
+    <div>index</div>
 </template>
-<script>
-export default {
-  head() {
-  
-  }
-}
-</script>　　

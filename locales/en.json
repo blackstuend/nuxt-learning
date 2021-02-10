@@ -11,8 +11,8 @@
       "introduction": "..."
     },
     "header":{
-      "get_api":"get_api",
-      "Base_64":"Base_64 change",
+      "get_api":"GetApi",
+      "Encryption":"Encryption/Decryption",
       "image":"image",
       "bluetooth":"bluetooth connect",
       "language":"change language",

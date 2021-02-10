@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
-        <a class="navbar-brand" href="#">Blackfloat</a>
+        <NuxtLink class="navbar-brand"  to="/getapi">Blackfloat</NuxtLink>
         <button
           class="navbar-toggler"
           type="button"
@@ -18,16 +18,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#">{{ $t('header.get_api') }}</a>
+              <NuxtLink class="nav-link" to="/getapi">{{ $t('header.get_api') }}</NuxtLink>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">{{ $t('header.Base_64') }}</a>
+              <NuxtLink class="nav-link" to="/encode">{{ $t('header.Encryption') }}</NuxtLink>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">{{ $t('header.image') }}</a>
+              <a class="nav-link" to="/image">{{ $t('header.image') }}</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">{{ $t('header.bluetooth') }}</a>
+              <NuxtLink class="nav-link" to="/bluetooth">{{ $t('header.bluetooth') }}</NuxtLink>
             </li>
             <li class="nav-item dropdown">
               <a
@@ -43,12 +43,12 @@
                 {{ $t('header.language') }}
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <NuxtLink class="dropdown-item" to="/en">{{
+                <a class="dropdown-item"  href='#' @click.prevent="toEnglish">{{
                   $t('header.english')
-                }}</NuxtLink>
-                <NuxtLink class="dropdown-item" to="/zh">{{
+                }}</a>
+                <a class="dropdown-item" href='#' @click.prevent="toChinese">{{
                   $t('header.chinese')
-                }}</NuxtLink>
+                }}</a>
               </div>
             </li>
           </ul>
@@ -56,7 +56,7 @@
       </div>
     </nav>
     <div class="banner d-flex align-items-center text-white">
-        <div class="text-white text-center w-100 h2"> GET API </div>
+        <div class="text-white text-center w-100 h2">Blackfloat</div>
     </div>
   </div>
 </template>
@@ -72,11 +72,23 @@ export default {
     open_dropdown_menu() {
       $('.dropdown-menu').toggle()
     },
+    toEnglish(){
+      this.$store.commit('SET_LANG', "en");
+      this.$i18n.locale = "en"
+    },
+    toChinese(){
+      this.locale = "zh"
+      this.$store.commit('SET_LANG', "zh");
+      this.$i18n.locale = "zh"
+    }
   },
   mounted() {
     $('.dropdown-item').click(() => {
       $('.dropdown-menu').toggle()
     })
+    let route_path = this.$route.fullPath.split("/");
+    console.log(route_path[route_path.length - 1 ])
+    this.topcis  = route_path[route_path.length - 1 ] == "" ? "Get Api" : route_path[route_path.length - 1 ]
   },
 }
 </script>

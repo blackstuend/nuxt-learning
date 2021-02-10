@@ -12,7 +12,7 @@
   },
   "header":{
     "get_api":"獲取台中api",
-    "Base_64":"切換base64",
+    "Encryption":"加密/解密",
     "image":"圖片",
     "bluetooth":"藍芽連線",
     "language":"切換語言",

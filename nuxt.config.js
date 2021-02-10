@@ -12,6 +12,10 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ],
+    script: [
+      { src: 'https://code.jquery.com/jquery-3.5.1.slim.min.js', type: 'text/javascript' },
+      { src: 'https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js', type: 'text/javascript' }
     ]
   },
 
@@ -38,7 +42,6 @@ export default {
     'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    'bootstrap-vue/nuxt'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -48,7 +51,7 @@ export default {
   build: {
   },
   router: {              // customize nuxt.js router (vue-router).
-    middleware: 'i18n'   // middleware all pages of the application
+    middleware: 'i18n',
   },
   server: {
     host: "0.0.0.0"

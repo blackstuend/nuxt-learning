@@ -49,6 +49,7 @@ export default {
     async add() {
       let filters = []
       let options = {}
+      let vm = this;
       filters.push({ services: ['battery_service'] })
       if (this.device_name == '') {
         this.error = true
@@ -66,7 +67,7 @@ export default {
         const characteristic = await service.getCharacteristic('battery_level')
         setInterval(async function () {
           let value = await characteristic.readValue()
-          this.$store.commit("bluetooth/UpdateBattery",value.getUint8(0))
+          vm.$store.commit("bluetooth/UpdateBattery",value.getUint8(0))
         }, 1000)
       } catch (e) {
         console.log(e)

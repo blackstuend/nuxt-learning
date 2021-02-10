@@ -52,6 +52,7 @@ export default {
   },
   router: {              // customize nuxt.js router (vue-router).
     middleware: 'i18n',
+    base: '/nuxt-learning/'
   },
   server: {
     host: "0.0.0.0"

@@ -24,7 +24,7 @@
               <NuxtLink class="nav-link" to="/encode">{{ $t('header.Encryption') }}</NuxtLink>
             </li>
             <li class="nav-item">
-              <a class="nav-link" to="/image">{{ $t('header.image') }}</a>
+              <NuxtLink class="nav-link" to="/image">{{ $t('header.image') }}</NuxtLink>
             </li>
             <li class="nav-item">
               <NuxtLink class="nav-link" to="/bluetooth">{{ $t('header.bluetooth') }}</NuxtLink>
@@ -81,9 +81,6 @@ export default {
     }
   },
   mounted() {
-    let route_path = this.$route.fullPath.split("/");
-    console.log(route_path[route_path.length - 1 ])
-    this.topcis  = route_path[route_path.length - 1 ] == "" ? "Get Api" : route_path[route_path.length - 1 ]
   },
 }
 </script>

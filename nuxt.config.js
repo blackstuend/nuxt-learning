@@ -22,12 +22,15 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '@/assets/scss/custom.scss'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~/plugins/i18n.js',
     '~/plugins/loading-overlay.js',
+    '~/plugins/copper.js',
+    '~/plugins/bootstrap.js'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -56,6 +59,10 @@ export default {
   },
   server: {
     host: "0.0.0.0"
-  }
+  }, 
+  bootstrapVue: {
+    bootstrapCSS: false,
+    icons: true,
+  },
 
 }

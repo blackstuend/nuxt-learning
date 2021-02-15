@@ -99,7 +99,7 @@ export default {
         let result = e.target.result
         vm.encode_text = result
       }
-      reader.readAsText(file);qwesazzxcsa
+      reader.readAsText(file);
     },
     encode() {
       let key = this.key_to_byte(this.Secret_Key, this.key)

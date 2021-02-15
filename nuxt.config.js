@@ -53,6 +53,9 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    vendor: [
+      'vue-cropperjs'
+   ]
   },
   router: {              // customize nuxt.js router (vue-router).
     middleware: 'i18n',

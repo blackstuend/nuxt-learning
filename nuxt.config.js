@@ -22,7 +22,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    // '@/assets/scss/custom.scss'
+    '@/assets/scss/custom.scss'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -53,9 +53,6 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    vendor: [
-      'vue-cropperjs'
-   ]
   },
   router: {              // customize nuxt.js router (vue-router).
     middleware: 'i18n',

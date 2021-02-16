@@ -81,7 +81,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 input[type='file'] {
   display: none;
 }

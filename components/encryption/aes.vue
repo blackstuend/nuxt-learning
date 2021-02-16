@@ -156,7 +156,7 @@ export default {
 }
 </script>
 
-<style scoped lang='scss' scoped>
+<style scoped lang='scss'>
 .border {
   width: 2px;
   position: absolute;
